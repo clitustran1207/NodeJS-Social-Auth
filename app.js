@@ -16,7 +16,7 @@ const configDB = require('./config/database');
 
 // routes
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var loginRouter = require('./routes/login');
 
 var app = express();
 
@@ -33,7 +33,6 @@ app.use(bodyParser()); // lấy thông tin từ html forms
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // passport setup
 app.use(session({secret: 'mysecretcookiecode'}));
